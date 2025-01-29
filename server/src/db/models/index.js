@@ -10,7 +10,7 @@ const config = require(__dirname + '/../config/database.json')[env];
 const db = {};
 require('dotenv').config({ path: path.resolve(__dirname, '..', '..', '..', '.env')});
 
-let sequelize;
+let sequelize; 
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
