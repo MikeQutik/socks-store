@@ -1,14 +1,18 @@
+
+require('dotenv').config()
 const express = require('express');
 const serverConfig = require('./config/serverConfig');
-const indexRouter = require('./routes/index.routes');
+const indexRouter = require('./routes/indexRouter');
+
+const PORT = process.env.PORT || 3000;
 
 const app = express();
-const PORT = process.env.PORT ?? 3000;
 
-// Конфигурация сервера
-serverConfig(app)
+serverConfig(app);
 
-// Маршрутизация сервера
 app.use('/', indexRouter);
 
-app.listen(PORT, () => console.log(`Server started at ${PORT} port`));
+app.listen(PORT, () => {
+    console.log(`Server started on ${PORT} PORT`);
+});
+
