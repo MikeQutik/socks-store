@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js --ext js,css,json",
+    "mig": "npx sequelize db:migrate",
+    "undoMig": "npx sequelize db:migrate:undo:all",
+    "remigrate": "npx sequelize db:migrate:undo:all && npx sequelize db:migrate",
+    "seed": "npx sequelize db:seed:all",
+    "undoSeed": "npx sequelize db:seed:undo:all",
+    "createDB": "npx sequelize db:create",
+    "dropDB": "npx sequelize db:drop"
   },
   "author": "",
   "license": "ISC",
