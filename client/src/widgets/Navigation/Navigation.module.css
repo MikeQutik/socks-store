@@ -1,0 +1,45 @@
+/* Основные стили для навигации */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #28c9d4, #44b17a);
+  padding: 20px 40px;
+  box-shadow: 0 4px 15px rgba(97, 250, 255, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navButton {
+  margin: 0 20px;
+  font-size: 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #61b8ff, #ffcc00);
+  border: none;
+  color: white;
+  padding: 25px 35px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+}
+
+.navButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 111, 97, 0.5);
+  background: linear-gradient(135deg, #ffcc00, #ff6f61);
+}
+
+.logo {
+  max-width: 150px; /* Максимальная ширина логотипа */
+  height: auto; /* Высота будет автоматически подстраиваться под ширину */
+  cursor: pointer; /* Указатель при наведении */
+  margin-right: 20px; /* Отступ справа от логотипа */
+}

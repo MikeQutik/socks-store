@@ -1,0 +1,65 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.sock {
+  width: 100px;
+  height: 120px;
+  background: linear-gradient(45deg, #ff69b4, #8a2be2);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.sock::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 20px;
+  background: radial-gradient(circle, #ffffff, #f0f0f0);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sock::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(45deg, #b13f78, #8a2be2);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.text::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #ff69b4, #8a2be2);
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
