@@ -21,7 +21,6 @@ function App() {
       children: [
         { path: "/", element: <HomePage /> },
         { path: "/Generator", element: <GeneratorPage /> },
-        { path: "*", element: <NotFoundPage /> },
       ],
     },
   ]);

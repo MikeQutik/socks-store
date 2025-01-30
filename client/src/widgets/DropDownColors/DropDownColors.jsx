@@ -13,14 +13,13 @@ function DropDown({ colors, setColors}) {
         <div>
         <h1>Выберите цвет</h1>
         <label htmlFor="options"></label>
-        <select id="options" value={selectedOption} onChange={handleChange}>
-          <option value="" disabled>
+        <select value={selectedOption} onChange={handleChange}>
+          <option disabled>
             Выберите...
           </option>
           {colors.map((color) => (
-            <option value={color.title}>{color.title}</option>
+            <option key={color.id} value={color.title}>{color.title}</option>
           ))}
-
           {/* <option value="red">Красный</option>
           <option value="green">Зеленый</option>
           <option value="blue">Синий</option>
@@ -28,13 +27,9 @@ function DropDown({ colors, setColors}) {
           <option value="yellow">Желтый</option>
           <option value="black">Черный</option> */}
         </select>
-
-        {/* Отображение выбранного значения */}
-        {selectedOption && (
           <div>
-            <div style={{ backgroundColor: `${selectedOption}`, display: 'inline-block',  padding: '2px 4px', width: '85px'}}><h2>{selectedOption}</h2></div>
+            <div style={{ backgroundColor: `${selectedOption}`, display: 'inline-block',  padding: '20px 4px', width: '85px'}}></div>
           </div>
-        )}
       </div>
     );
 }
