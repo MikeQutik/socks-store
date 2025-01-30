@@ -11,7 +11,7 @@ function Navigation() {
       <div className={styles.navigation}>
         <div className={styles.navLeft}>
           <img
-            src="/assets/logo.png"
+            src="/public/logo.png"
             alt="Logo"
             className={styles.logo}
             onClick={() => navigate("/")}
