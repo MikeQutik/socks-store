@@ -1,25 +1,29 @@
 const router = require('express').Router();
-const { User } = require('../db/models');\
+require('dotenv').config();
+const { User } = require('../db/models');
 const bcrypt = require('bcrypt');
 const { generateTokens } = require('../utils/generateTokens');
 const jwtConfig = require('../config/jwtConfig')
+const formatResponse = require('../utils/formatResponse');
 
-function formatResponse(statusCode, message, data = null, error = null) {
-    return {
-        statusCode,
-        message,
-        data,
-        error,
-    };
-}
+// function formatResponse(statusCode, message, data = null, error = null) {
+//     return {
+//         statusCode,
+//         message,
+//         data,
+//         error,
+//     };
+// }
 
 router.post('/registration', async (req, res) => {
 
     try {
         const { name, email, password } = req.body;
+// console.log(req.body);
 
         if (name && email && password) {
             const candidate = await User.create({ name, email, password: await bcrypt.hash(password, 10) })
+            // console.log(candidate);
             
                 
                 const user = candidate.get({ plain: true })
@@ -27,6 +31,7 @@ router.post('/registration', async (req, res) => {
             
             delete user.password;
             const { accessToken, refreshToken } = generateTokens(user)
+console.log(accessToken);
 
             res
                 .status(201)
@@ -83,4 +88,4 @@ router.delete('/logout', (req, res) => {
 
 
 
-module.exports = formatResponse;
+module.exports = router;
