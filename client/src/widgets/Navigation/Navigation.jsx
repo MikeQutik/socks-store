@@ -11,6 +11,15 @@ function Navigation() {
       <div className={styles.text}>random socks store</div>
       <div className={styles.navigation}>
         <div className={styles.navLeft}>
+<<<<<<< HEAD
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className={styles.logo}
+            onClick={() => navigate("/")}
+          />
+=======
+>>>>>>> dev
           <Button className={styles.navButton} onClick={() => navigate("/")}>
             Home
           </Button>
