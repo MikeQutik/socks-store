@@ -49,7 +49,7 @@ function GeneratorPage(props) {
             <DropDownColors colors={colors} setColors={setColors} /> 
             <DropDownPatterns patterns={patterns} setPatterns={setPatterns} /> 
             <DropDownImages images={images} setImages={setImages} />
-            <button style={{ backgroundColor: 'black'}} type='button' onClick={}><h3>Создать носок</h3></button>
+            <button style={{ backgroundColor: 'black'}} type='button'><h3>Создать носок</h3></button>
         </div>
     );
 }

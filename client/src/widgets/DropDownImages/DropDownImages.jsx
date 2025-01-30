@@ -30,7 +30,6 @@ function DropDownImages({ images, setImages}) {
           <div>
           <img 
                 src={selectedOption} 
-                 
                 style={{ width: '300px', height: 'auto' }} 
             />
           </div>

@@ -6,6 +6,8 @@ import Footer from "../widgets/footer/Footer";
 import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import GeneratorPage from '../pages/GeneratorPage/GeneratorPage';
+import LogInPage from '../pages/LogInPage/LogInPage';
+import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +23,8 @@ function App() {
       children: [
         { path: "/", element: <HomePage /> },
         { path: "/Generator", element: <GeneratorPage /> },
+        { path: "/Login", element: <LogInPage /> },
+        { path: "/Registration", element: <RegistrationPage /> },
       ],
     },
   ]);
