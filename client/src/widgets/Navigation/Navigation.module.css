@@ -29,9 +29,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #28c9d4, #44b17a);
-  padding: 20px 40px;
-  box-shadow: 0 4px 15px rgba(91, 175, 112, 0.466);
+  background: linear-gradient(135deg, #5dc55d, #44b17a, #dfd553);
+  padding: 20px 0px;
+  box-shadow: 0 4px 15px rgba(1, 245, 62, 0.466);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -45,8 +45,8 @@
 }
 
 .navButton {
-  margin: 0 20px;
-  font-size: 25px;
+  margin: 0 30px;
+  font-size: 35px;
   border-radius: 30px;
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #61b8ff, #ffcc00);
@@ -55,6 +55,7 @@
   padding: 25px 35px;
   font-weight: bold;
   box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .navButton:hover {

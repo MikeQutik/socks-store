@@ -5,3 +5,5 @@ class PatternApi {
     return allPatterns;
   }
 }
+
+export default PatternApi;
