@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import ColorsList from '../../widgets/ColorList/ColorList';
 import ColorApi from '../../entities/Color/ColorApi';
-import DropDown from '../../shared/ui/DropDown/DropDown';
+import DropDownColors from '../../widgets/DropDownColors/DropDownColors';
+
 
 
 function GeneratorPage(props) {
@@ -21,11 +21,7 @@ function GeneratorPage(props) {
     return (
         <div>
             <h1>Генератор носков</h1>
-            <ColorsList colors={colors} />
-            <DropDown />
-            <img
-                src="/public/sokcs.jpeg"
-                alt="Logo" />
+            <DropDownColors colors={colors} setColors={setColors}/> 
         </div>
     );
 }

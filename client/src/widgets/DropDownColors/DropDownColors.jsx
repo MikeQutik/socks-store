@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-function DropDown(props) {
+function DropDown({ colors, setColors}) {
 
         const [selectedOption, setSelectedOption] = useState('');
       
@@ -17,12 +17,16 @@ function DropDown(props) {
           <option value="" disabled>
             Выберите...
           </option>
-          <option value="red">Красный</option>
+          {colors.map((color) => (
+            <option value={color.title}>{color.title}</option>
+          ))}
+
+          {/* <option value="red">Красный</option>
           <option value="green">Зеленый</option>
           <option value="blue">Синий</option>
           <option value="white">Белый</option>
           <option value="yellow">Желтый</option>
-          <option value="black">Черный</option>
+          <option value="black">Черный</option> */}
         </select>
 
         {/* Отображение выбранного значения */}
