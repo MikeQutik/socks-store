@@ -8,14 +8,9 @@ function Navigation() {
 
   return (
     <>
+      <div className={styles.text}>random socks store</div>
       <div className={styles.navigation}>
         <div className={styles.navLeft}>
-          <img
-            src="/assets/logo.png"
-            alt="Logo"
-            className={styles.logo}
-            onClick={() => navigate("/")}
-          />
           <Button className={styles.navButton} onClick={() => navigate("/")}>
             Home
           </Button>
