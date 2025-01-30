@@ -1,0 +1,79 @@
+/* Основные стили для навигации */
+.text {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    rgb(72, 182, 197),
+    rgb(39, 53, 177),
+    rgb(12, 3, 63)
+  );
+
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+
+@keyframes rainbow-animation {
+  to {
+    background-position: 100%;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #5dc55d, #44b17a, #dfd553);
+  padding: 20px 0px;
+  box-shadow: 0 4px 15px rgba(1, 245, 62, 0.466);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navButton {
+  margin: 0 30px;
+  font-size: 35px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #61b8ff, #ffcc00);
+  border: none;
+  color: white;
+  padding: 25px 35px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.navButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 111, 97, 0.5);
+  background: linear-gradient(135deg, #ffcc00, #ff6f61);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота страницы */
+}
+
+.logo {
+  position: center;
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}

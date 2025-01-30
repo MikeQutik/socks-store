@@ -1,0 +1,32 @@
+/* Стили для header */
+.navbar {
+  display: flex;
+  justify-content: center; /* Располагаем кнопки по центру */
+  align-items: center; /* Вертикальное выравнивание */
+  gap: 20px; /* Расстояние между кнопками */
+  position: fixed; /* Фиксируем навбар в верхней части */
+  top: 0; /* Навбар будет располагаться сверху */
+  left: 0;
+  right: 0;
+  background-color: #333; /* Темный фон навбара */
+  padding: 10px 0; /* Отступы сверху и снизу */
+  z-index: 1000; /* Убедитесь, что navbar всегда будет на переднем плане */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для визуального отделения */
+}
+
+/* Стили для кнопок навигации */
+.navbar-button {
+  background-color: #4caf50; /* Зеленый фон кнопок */
+  color: white; /* Белый текст */
+  border: none;
+  padding: 10px 20px; /* Размер кнопок */
+  font-size: 16px; /* Размер шрифта */
+  cursor: pointer; /* Курсор руки на кнопке */
+  border-radius: 5px; /* Закругленные углы */
+  transition: background-color 0.3s ease; /* Плавный переход для фона при наведении */
+}
+
+/* Стили для кнопок при наведении */
+.navbar-button:hover {
+  background-color: #45a049; /* При наведении кнопка становится темнее */
+}
