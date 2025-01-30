@@ -2,7 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navigation from "../widgets/Navigation/Navigation";
 import React from "react";
 import "./App.css";
-// import Logo from "../shared/ui/logo/logo";
+import Footer from "../widgets/footer/Footer";
 import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import GeneratorPage from '../pages/GeneratorPage/GeneratorPage';
@@ -15,6 +15,7 @@ function App() {
         <div>
           <Navigation />
           <Outlet />
+          <Footer />
         </div>
       ),
       children: [
