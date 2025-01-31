@@ -1,0 +1,31 @@
+/* Общие стили для контейнера */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif; /* Убедитесь, что шрифт стабильный */
+  margin: 0;
+}
+
+/* Стили для контейнера выпадающих списков */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease; /* Плавные изменения */
+}
+
+/* Стили для кнопки */
+.button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные изменения при наведении */
+}

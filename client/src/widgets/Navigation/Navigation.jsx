@@ -17,18 +17,10 @@ function Navigation({ user, setUser }) {
 
   return (
     <>
-      <div className={styles.text}>random socks store</div>
+      <div className={styles.text}>НОСОЧНЫЙ РЭНДОМ ШОП</div>
       <div className={styles.navigation}>
         <div className={styles.navLeft}>
-
-          {/* Логотип */}
-          <img
-            src="logo.png"
-            alt="Logo"
-            className={styles.logo}
-            onClick={() => navigate("/")}
-          />
-  
+        
           {/* Список навигации */}
           <ul className="navbar-nav" 
 
