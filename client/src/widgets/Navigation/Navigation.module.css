@@ -1,6 +1,7 @@
 /* Основные стили для навигации */
 .text {
   font-size: 48px;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   background: linear-gradient(
     90deg,
@@ -77,3 +78,5 @@
   max-width: 100%;
   height: auto;
 }
+
+
