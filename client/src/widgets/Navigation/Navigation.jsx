@@ -32,11 +32,6 @@ function Navigation() {
           >
             Генератор носков
           </Button>
-          {user && (
-            <Button className={styles.navButton} onClick={handlerLogout}>
-              Logout
-            </Button>
-          )}
         </div>
       </div>
     </>
