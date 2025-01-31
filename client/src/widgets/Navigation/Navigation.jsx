@@ -17,30 +17,15 @@ function Navigation({ user, setUser }) {
 
   return (
     <>
-      <div className={styles.text}>random socks store</div>
+      <div className={styles.text}>НОСОЧНЫЙ РЭНДОМ ШОП</div>
       <div className={styles.navigation}>
-        <div className={styles.navLeft}>
-
-          {/* Логотип */}
-          {/* <img
-            src="logo.png"
-            alt="Logo"
-            className={styles.logo}
-            onClick={() => navigate("/")} */}
-          {/* /> */}
-  
-          
-          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-
-          
-            
+        <div className={styles.navLeft}>          
+          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>            
             <li>
               <Button className={styles.navButton} onClick={() => navigate("/")}>
                 Главная по носкам
               </Button>
-            </li>
-  
-            {/* Если пользователь не аутентифицирован, показать "Вход" и "Регистрация" */}
+            </li>            
             {!user && (
               <li>
                 <Button
@@ -56,12 +41,7 @@ function Navigation({ user, setUser }) {
                   Носочная регистрация
                 </Button>
               </li>
-            )}
-  
-            {/* Ссылка на "Носкомагия" */}
-            
-  
-            {/* Если пользователь аутентифицирован, показать кнопку "Выход" */}
+            )}                           
             {user && (
               <li>
                 <Button className={styles.navButton} onClick={handlerLogout}>

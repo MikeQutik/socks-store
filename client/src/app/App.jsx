@@ -11,6 +11,7 @@ import UserApi from "../entities/user/UserApi";
 import GeneratorPage from '../pages/GeneratorPage/GeneratorPage';
 import LogInPage from '../pages/LogInPage/LogInPage';
 
+
 function App() {
   const [user, setUser] = useState(null);
   const [name, setName] = useState("");
@@ -32,9 +33,12 @@ function App() {
     {
       path: "/",
       element: (
-        <div>
+
+        <div className="App">
           <Navigation user={user} setUser={setUser} />
-          <Outlet />
+          <main className="content">
+            <Outlet />
+          </main>
           <Footer />
         </div>
       ),
@@ -78,10 +82,10 @@ function App() {
         },
         { path: "/Generator", element: <GeneratorPage /> },
         { path: "/Login", element: <LogInPage /> },
+
       ],
     },
-    { path: "*", element: <NotFoundPage /> },
-  ]);
+     ]);
   return <RouterProvider router={router} />;
 }
 
