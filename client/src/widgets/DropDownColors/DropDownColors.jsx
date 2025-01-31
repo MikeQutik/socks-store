@@ -1,19 +1,24 @@
 import React from 'react';
 import { useState } from 'react';
+import DropDrilling from '../DropDrilling/DropDrilling';
 
-function DropDown({ colors, setColors}) {
+function DropDown({ colors, setColors }) {
 
-        const [selectedOption, setSelectedOption] = useState('');
+        const [selectedColor, setSelectedColor] = useState('');
+
+        console.log(selectedColor);
+        
       
         const handleChange = (event) => {
-          setSelectedOption(event.target.value);
+          setSelectedColor(event.target.value);
         };
 
     return (
+      <div>
         <div>
         <h1>Выберите цвет</h1>
         <label htmlFor="options"></label>
-        <select value={selectedOption} onChange={handleChange}>
+        <select value={selectedColor} onChange={handleChange}>
           <option disabled>
             Выберите...
           </option>
@@ -28,8 +33,10 @@ function DropDown({ colors, setColors}) {
           <option value="black">Черный</option> */}
         </select>
           <div>
-            <div style={{ backgroundColor: `${selectedOption}`, display: 'inline-block',  padding: '20px 4px', width: '85px'}}></div>
+            <div style={{ backgroundColor: `${selectedColor}`, display: 'inline-block',  padding: '20px 4px', width: '85px'}}></div>
           </div>
+      </div>
+      <DropDrilling selectedColor={selectedColor}/>
       </div>
     );
 }
