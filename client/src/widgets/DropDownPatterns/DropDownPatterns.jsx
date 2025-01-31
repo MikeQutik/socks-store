@@ -1,19 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
+import DropDrilling from '../DropDrilling/DropDrilling';
 
 function DropDownPatterns({ patterns, setPatterns}) {
 
-        const [selectedOption, setSelectedOption] = useState('');
+        const [selectedPattern, setSelectedPattern] = useState('');
       
         const handleChange = (event) => {
-          setSelectedOption(event.target.value);
+          setSelectedPattern(event.target.value);
         };
 
     return (
         <div>
         <h1>Выберите узор</h1>
         <label htmlFor="options"></label>
-        <select value={selectedOption} onChange={handleChange}>
+        <select value={selectedPattern} onChange={handleChange}>
           <option disabled>
             Выберите...
           </option>
@@ -29,11 +30,14 @@ function DropDownPatterns({ patterns, setPatterns}) {
         </select>
           <div>
           <img 
-                src={selectedOption} 
+                src={selectedPattern} 
                  
                 style={{ width: '300px', height: 'auto' }} 
             />
           </div>
+
+          <img src={selectedPattern} alt="" />
+          <DropDrilling selectedPattern={selectedPattern}/>
       </div>
     );
 }

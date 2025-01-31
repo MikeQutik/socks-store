@@ -13,8 +13,6 @@ const corsConfig = {
     credentials: true,
   };
 
-
-
 const serverConfig = (app) => {
 
     app.use(express.urlencoded({ extended: true }));
@@ -27,7 +25,7 @@ const serverConfig = (app) => {
         origin: ['http://localhost:5173']
     }));
 
-
 }
+
 module.exports = serverConfig;
 
