@@ -8,29 +8,29 @@ function Navigation() {
 
   return (
     <>
-      <div className={styles.text}>random socks store</div>
+      <div className={styles.text}>НОСОЧНЫЙ РЭНДОМ ШОП</div>
       <div className={styles.navigation}>
         <div className={styles.navLeft}>
           <Button className={styles.navButton} onClick={() => navigate("/")}>
-            Home
+            Главная по носкам
           </Button>
           <Button
             className={styles.navButton}
             onClick={() => navigate("/Login")}
           >
-            Вход
+            Вход без носка
           </Button>
           <Button
             className={styles.navButton}
             onClick={() => navigate("/Registration")}
           >
-            Регистрация
+            Носочная регистрация
           </Button>
           <Button
             className={styles.navButton}
             onClick={() => navigate("/Generator")}
           >
-            Генератор носков
+            Носкомагия
           </Button>
         </div>
       </div>
