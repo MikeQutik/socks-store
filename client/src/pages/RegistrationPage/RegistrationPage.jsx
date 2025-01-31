@@ -1,10 +1,13 @@
-import React from 'react';
 
-function RegistrationPage(props) {
+import RegistrationForm from "../../widgets/RegistrationForm.jsx/RegistrationForm";
+
+function RegistrationPage({ userData }) {
     return (
-        <div>
-            
-        </div>
+        <>
+            <h1>Тут Регистрация</h1>
+
+            <RegistrationForm userData={userData} />
+        </>
     );
 }
 
