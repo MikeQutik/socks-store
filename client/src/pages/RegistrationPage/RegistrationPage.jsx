@@ -1,3 +1,4 @@
+
 import RegistrationForm from "../../widgets/RegistrationForm.jsx/RegistrationForm";
 
 function RegistrationPage({ userData }) {

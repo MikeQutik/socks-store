@@ -2,12 +2,14 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navigation from "../widgets/Navigation/Navigation";
 import { useEffect, useState } from "react";
 import "./App.css";
-// import Logo from "../shared/ui/logo/logo";
+import Footer from "../widgets/footer/Footer";
 import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 import AuthorizationPage from "../pages/AuthorizationPage/AuthorizationPage";
 import UserApi from "../entities/user/UserApi";
+import GeneratorPage from '../pages/GeneratorPage/GeneratorPage';
+import LogInPage from '../pages/LogInPage/LogInPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -33,10 +35,12 @@ function App() {
         <div>
           <Navigation user={user} setUser={setUser} />
           <Outlet />
+          <Footer />
         </div>
       ),
       children: [
         { path: "/", element: <HomePage /> },
+
         { path: "*", element: <NotFoundPage /> },
         {
           path: "/auth/registration",
@@ -72,6 +76,8 @@ function App() {
             />
           ),
         },
+        { path: "/Generator", element: <GeneratorPage /> },
+        { path: "/Login", element: <LogInPage /> },
       ],
     },
     { path: "*", element: <NotFoundPage /> },

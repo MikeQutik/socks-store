@@ -17,8 +17,10 @@ function Navigation({ user, setUser }) {
 
   return (
     <>
+      <div className={styles.text}>random socks store</div>
       <div className={styles.navigation}>
         <div className={styles.navLeft}>
+
           {/* Логотип */}
           <img
             src="logo.png"
@@ -29,6 +31,7 @@ function Navigation({ user, setUser }) {
   
           {/* Список навигации */}
           <ul className="navbar-nav" 
+
           >
             {/* Главная страница */}
             <li>

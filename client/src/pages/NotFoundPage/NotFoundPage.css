@@ -1,0 +1,21 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: url("https://ruweb.net/static/images/articles/oshibka-404-chto-eto/image1.jpg")
+    center center no-repeat;
+  background-size: 80% 90%;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  color: rgba(0, 2, 0, 0.76);
+  font-size: 155px;
+  font-weight: 300;
+  text-align: center;
+  font-weight: 900;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgb(86, 224, 144);
+}
