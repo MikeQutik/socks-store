@@ -19,20 +19,13 @@ function Navigation({ user, setUser }) {
     <>
       <div className={styles.text}>НОСОЧНЫЙ РЭНДОМ ШОП</div>
       <div className={styles.navigation}>
-        <div className={styles.navLeft}>
-        
-          {/* Список навигации */}
-          <ul className="navbar-nav" 
-
-          >
-            {/* Главная страница */}
+        <div className={styles.navLeft}>          
+          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>            
             <li>
               <Button className={styles.navButton} onClick={() => navigate("/")}>
                 Главная по носкам
               </Button>
-            </li>
-  
-            {/* Если пользователь не аутентифицирован, показать "Вход" и "Регистрация" */}
+            </li>            
             {!user && (
               <li>
                 <Button
@@ -48,24 +41,18 @@ function Navigation({ user, setUser }) {
                   Носочная регистрация
                 </Button>
               </li>
-            )}
-  
-            {/* Ссылка на "Носкомагия" */}
-            <li>
-              <Button
-                className={styles.navButton}
-                onClick={() => navigate("/Generator")}
-              >
-                Носкомагия
-              </Button>
-            </li>
-  
-            {/* Если пользователь аутентифицирован, показать кнопку "Выход" */}
+            )}                           
             {user && (
               <li>
                 <Button className={styles.navButton} onClick={handlerLogout}>
                   Выход с носками
                 </Button>
+                <Button
+                className={styles.navButton}
+                onClick={() => navigate("/Generator")}
+              >
+                Носкомагия
+              </Button>
               </li>
             )}
           </ul>

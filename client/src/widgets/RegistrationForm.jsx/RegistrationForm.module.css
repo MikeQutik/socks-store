@@ -1,1 +1,20 @@
 
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Смещение на половину ширины и высоты */
+    padding: 24px;
+    background-color: rgb(217, 224, 222);
+    border-radius: 8px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .element {
+    padding: 8px;
+    border-radius: 92px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    color: rgb(0, 0, 0);
+  }

@@ -5,7 +5,10 @@ import "./HomePage.css";
 function HomePage() {
   return (
     <div>
-      <h1>Наши звездные носки освежат ваши мозги!</h1>
+      <h1>Каждый взор радует всех,
+Каждый шаг оставит след.
+Полосатые, в горошек,
+Для весёлых наших ножек.</h1>
       <img src={logo} alt="Logo" className="logo" />
     </div>
   );
