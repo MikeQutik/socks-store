@@ -5,12 +5,14 @@ const morgan = require('morgan');
 const cookieParser = require('cookie-parser')
 const cors = require('cors');
 
+
 const { CLIENT_URL } = process.env;
 
 const corsConfig = {
     origin: [CLIENT_URL],
     credentials: true,
   };
+
 
 
 const serverConfig = (app) => {
@@ -20,8 +22,12 @@ const serverConfig = (app) => {
     app.use(express.json());
     app.use(cookieParser());
     app.use(express.static(path.join(__dirname, '../public')));
-    app.use(cors(corsConfig));
-}
+    app.use(cors({
+        credentials: true,
+        origin: ['http://localhost:5173']
+    }));
+
+
 
 module.exports = serverConfig;
 
