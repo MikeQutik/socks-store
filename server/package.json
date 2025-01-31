@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/app.js",
-    "dev": "nodemon ./src/app.js --ext js",
+    "dev": "nodemon ./src/app.js --ext js, json, jsx",
     "mig": "npx sequelize db:migrate",
     "undoMig": "npx sequelize db:migrate:undo:all",
     "remigrate": "npx sequelize db:migrate:undo:all && npx sequelize db:migrate",
