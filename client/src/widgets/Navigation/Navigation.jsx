@@ -22,18 +22,18 @@ function Navigation({ user, setUser }) {
         <div className={styles.navLeft}>
 
           {/* Логотип */}
-          <img
+          {/* <img
             src="logo.png"
             alt="Logo"
             className={styles.logo}
-            onClick={() => navigate("/")}
-          />
+            onClick={() => navigate("/")} */}
+          {/* /> */}
   
-          {/* Список навигации */}
-          <ul className="navbar-nav" 
+          
+          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
 
-          >
-            {/* Главная страница */}
+          
+            
             <li>
               <Button className={styles.navButton} onClick={() => navigate("/")}>
                 Главная по носкам
@@ -59,14 +59,7 @@ function Navigation({ user, setUser }) {
             )}
   
             {/* Ссылка на "Носкомагия" */}
-            <li>
-              <Button
-                className={styles.navButton}
-                onClick={() => navigate("/Generator")}
-              >
-                Носкомагия
-              </Button>
-            </li>
+            
   
             {/* Если пользователь аутентифицирован, показать кнопку "Выход" */}
             {user && (
@@ -74,6 +67,12 @@ function Navigation({ user, setUser }) {
                 <Button className={styles.navButton} onClick={handlerLogout}>
                   Выход с носками
                 </Button>
+                <Button
+                className={styles.navButton}
+                onClick={() => navigate("/Generator")}
+              >
+                Носкомагия
+              </Button>
               </li>
             )}
           </ul>

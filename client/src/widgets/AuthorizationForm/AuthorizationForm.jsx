@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import UserApi from "../../entities/User/UserApi";
 import { useNavigate } from "react-router-dom";
+import styles from "../RegistrationForm.jsx/RegistrationForm.module.css";
+import { Button } from "antd";
 
 function AuthorizationForm({ userData }) {
   const navigate = useNavigate();
@@ -21,7 +23,7 @@ function AuthorizationForm({ userData }) {
   return (
     <form
       onSubmit={handlerAuthorization}
-      className="container"
+      className={styles.container}
       method="post"
       action="/registration"
     >
@@ -31,7 +33,7 @@ function AuthorizationForm({ userData }) {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           name="email"
-          className="form-control"
+          className={styles.element}
           placeholder="Email address"
         />
       </div>
@@ -41,13 +43,13 @@ function AuthorizationForm({ userData }) {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           name="password"
-          className="form-control"
+          className={styles.element}
           placeholder="Password"
         />
       </div>
-      <button type="submit" className="btn btn-primary">
-        Authorization
-      </button>
+      <Button type="submit" className="btn btn-primary" onClick={handlerAuthorization}>
+        Авторизация
+      </Button>
     </form>
   );
 }
