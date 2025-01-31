@@ -28,15 +28,15 @@ function GeneratorPage(props) {
     setImages(data);
   }
 
+  async function сreatedSockHendler() {
+          
+              const { data } = await SockApi.createSock()
+
+      }
+
   useEffect(() => {
     loadColor();
-  }, []);
-
-  useEffect(() => {
     loadPattern();
-  }, []);
-
-  useEffect(() => {
     loadImage();
   }, []);
 
@@ -48,7 +48,7 @@ function GeneratorPage(props) {
         <DropDownPatterns patterns={patterns} setPatterns={setPatterns} />
         <DropDownImages images={images} setImages={setImages} />
       </div>
-      <button style={StyleSheet.button} type="button">
+      <button style={StyleSheet.button} type="button" onClick={сreatedSockHendler}>
         <h3>Создать носок</h3>
       </button>
     </div>

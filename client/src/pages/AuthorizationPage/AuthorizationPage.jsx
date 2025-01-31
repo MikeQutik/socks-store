@@ -6,6 +6,7 @@ function AuthorizationPage({ userData }) {
         <>
             <h1>Тут Авторизация</h1>
 
+
             <AuthorizationForm userData={userData} />
         </>
     );

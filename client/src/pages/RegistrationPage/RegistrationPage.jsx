@@ -4,6 +4,7 @@ import RegistrationForm from "../../widgets/RegistrationForm.jsx/RegistrationFor
 function RegistrationPage({ userData }) {
     return (
         <>
+
             <h1>Тут Регистрация</h1>
 
             <RegistrationForm userData={userData} />
